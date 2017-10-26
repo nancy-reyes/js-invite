@@ -61,6 +61,7 @@ class Invitation {
     changeBackgroundColor(newBackgroundColor) {
         this.container.css("background-color", newBackgroundColor);
     }
+ 
 
 }
 
@@ -73,6 +74,37 @@ let invitation = new Invitation(invitationElement);
 
 // Add event listeners
 // using JQuery to get what the user has entered in the form.
-$("#title-input").on('keypress', function(evt) {
+
+$("#title-input").on('keyup', function(evt) {
     invitation.changeTitle($("#title-input").val());
 });
+
+$("#date-input").on('keyup', function(evt) {
+    invitation.changeDate($("#date-input").val());
+});
+
+$("#start-input").on('change', function(evt) {
+    invitation.changeStart($("#start-time").val());
+});
+
+$("#end-input").on('keyup', function(evt) {
+    invitation.changeEnd($("#end-time").val());
+});
+
+$("#description-input").on('keyup', function(evt) {
+    invitation.changeDescription($("#description-input").val());
+});
+
+$("#location-input").on('keyup', function(evt) {
+    invitation.changeLocation($("#location-input").val());
+});
+
+$("#font").on('change', function(evt) {
+    invitation.changeFont($("#font").val());
+});
+
+
+$("#container").on('click', function(evt) {
+    invitation.changeBackgroundColor($("".data());
+});
+`   1
